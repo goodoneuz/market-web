@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import MainLayout from "./layouts/main";
 import Home from "./views/Home.vue";
+import ProductDetails from './views/ProductDetails'
 import { homedir } from "os";
 
 Vue.use(Router);
@@ -18,6 +19,11 @@ export default new Router({
           path: '/',
           component: Home,
           name: "home"
+        },
+        {
+          path: '/product',
+          component: ProductDetails,
+          name: 'product-details'
         }
       ]
     },

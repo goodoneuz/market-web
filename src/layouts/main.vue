@@ -1,66 +1,6 @@
 <template>
   <v-app id="inspire">
-    <v-navigation-drawer
-      v-model="drawer"
-      app
-      class="deep-purple accent-4"
-      dark
-    >
-    <v-card
-    class="mx-auto"
-    max-width="434"
-    tile
-  >
-    <v-img
-      height="100%"
-      src="https://cdn.vuetifyjs.com/images/cards/server-room.jpg"
-    >
-      <v-row
-        align="end"
-        class="fill-height"
-      >
-        <v-col
-          align-self="start"
-          class="pa-0 text-center"
-          cols="12"
-        >
-          <v-avatar
-            class="profile"
-            color="grey"
-            size="80"
-            :tile="false"
-          >
-            <v-img src="https://yt3.ggpht.com/a/AGF-l7_8zjcjsXj7sDs5vNOG4KJBp8gBXBtqVWsfVw=s900-c-k-c0xffffffff-no-rj-mo"></v-img>
-          </v-avatar>
-        </v-col>
-        <v-col class="py-0">
-          <v-list-item
-            color="rgba(0, 0, 0, .4)"
-            dark
-          >
-            <v-list-item-content>
-              <v-list-item-title class="title">Elmurod G'aniyev</v-list-item-title>
-              <v-list-item-subtitle>Abu saxiy</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-col>
-      </v-row>
-    </v-img>
-  </v-card>
-      <v-list dense>
-        <v-list-item v-for="(item,index) in navitems" :key="index" @click="test">
-          <v-list-item-content>
-            <v-list-item-title>{{ item }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-      <template v-slot:append>
-        <div class="pa-2">
-          <v-btn block>Выйти</v-btn>
-        </div>
-      </template>
-    </v-navigation-drawer>
-
+    <navigation-drawer :drawer.sync="drawer" />
     <v-app-bar
       app
       color="indigo"
@@ -84,14 +24,18 @@
         <router-view></router-view>
       </v-container>
     </v-content>
-    <v-footer app color="indigo">
+    <v-footer color="indigo">
       <span class="white--text">&copy; 2019</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import NavigationDrawer from '@/components/navigation-drawer';
+
 export default {
+  name: 'MainLayout',
+  components: { NavigationDrawer },
   props: {
     source: String
   },

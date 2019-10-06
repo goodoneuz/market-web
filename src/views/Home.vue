@@ -4,6 +4,7 @@
       v-for="(card, index) in cards"
       :key="index"
       :cols="6"
+      no-gutters
       >
       <product :product="card" />
     </v-col>

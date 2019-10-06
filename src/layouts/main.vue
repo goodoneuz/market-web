@@ -6,9 +6,9 @@
       color="indigo"
       dark
     >
-      <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
+      <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
       <v-toolbar-title>Webozor.uz</v-toolbar-title>
-      <div class="flex-grow-1"></div>
+      <div class="flex-grow-1" />
 
       <v-btn icon>
         <v-icon>mdi-magnify </v-icon>
@@ -21,7 +21,7 @@
 
     <v-content>
       <v-container class="fill-height" fluid>
-        <router-view></router-view>
+        <router-view />
       </v-container>
     </v-content>
     <v-footer color="indigo">
@@ -31,13 +31,16 @@
 </template>
 
 <script>
-import NavigationDrawer from '@/components/navigation-drawer';
+import NavigationDrawer from '@/components/navigation-drawer'
 
 export default {
   name: 'MainLayout',
   components: { NavigationDrawer },
   props: {
-    source: String
+    source: {
+      type: String,
+      default: ''
+    }
   },
   data: () => ({
     drawer: false,
@@ -56,5 +59,5 @@ export default {
       console.log('test')
     }
   }
-};
+}
 </script>

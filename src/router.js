@@ -1,16 +1,15 @@
-import Vue from "vue";
-import Router from "vue-router";
-import MainLayout from "./layouts/main";
-import Home from "./views/Home.vue";
+import Vue from 'vue'
+import Router from 'vue-router'
+import MainLayout from './layouts/main'
+import Home from './views/Home.vue'
 import ProductDetails from './views/product/show'
 import ProductCreate from './views/product/create'
 import CardView from './views/card/show'
-import { homedir } from "os";
 
-Vue.use(Router);
+Vue.use(Router)
 
 export default new Router({
-  mode: "history",
+  mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
@@ -20,7 +19,7 @@ export default new Router({
         {
           path: '/',
           component: Home,
-          name: "home"
+          name: 'home'
         },
         {
           path: '/product',
@@ -38,15 +37,15 @@ export default new Router({
           name: 'card-new'
         }
       ]
-    },
+    }
     // {
-    //   path: "/about",
-    //   name: "about",
+    //   path: '/about',
+    //   name: 'about',
     //   // route level code-splitting
     //   // this generates a separate chunk (about.[hash].js) for this route
     //   // which is lazy-loaded when the route is visited.
     //   component: () =>
-    //     import(/* webpackChunkName: "about" */ "./views/About.vue")
+    //     import(/* webpackChunkName: 'about' */ './views/About.vue')
     // }
   ]
-});
+})

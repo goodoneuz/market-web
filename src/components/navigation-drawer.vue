@@ -29,7 +29,7 @@
               size="80"
               :tile="false"
             >
-              <v-img src="https://yt3.ggpht.com/a/AGF-l7_8zjcjsXj7sDs5vNOG4KJBp8gBXBtqVWsfVw=s900-c-k-c0xffffffff-no-rj-mo"></v-img>
+              <v-img src="https://yt3.ggpht.com/a/AGF-l7_8zjcjsXj7sDs5vNOG4KJBp8gBXBtqVWsfVw=s900-c-k-c0xffffffff-no-rj-mo" />
             </v-avatar>
           </v-col>
           <v-col class="py-0">
@@ -56,7 +56,7 @@
       >
         <template v-slot:activator>
           <v-list-item-content>
-            <v-list-item-title v-text="item.title"></v-list-item-title>
+            <v-list-item-title v-text="item.title" />
           </v-list-item-content>
         </template>
 
@@ -65,7 +65,7 @@
           :key="subItem.title"
         >
           <v-list-item-content>
-            <v-list-item-title v-text="subItem.title"></v-list-item-title>
+            <v-list-item-title v-text="subItem.title" />
           </v-list-item-content>
         </v-list-item>
       </v-list-group>
@@ -93,8 +93,8 @@ export default {
         action: 'local_activity',
         title: 'Attractions',
         items: [
-          { title: 'List Item' },
-        ],
+          { title: 'List Item' }
+        ]
       },
       {
         action: 'restaurant',
@@ -103,46 +103,46 @@ export default {
         items: [
           { title: 'Breakfast & brunch' },
           { title: 'New American' },
-          { title: 'Sushi' },
-        ],
+          { title: 'Sushi' }
+        ]
       },
       {
         action: 'school',
         title: 'Education',
         items: [
-          { title: 'List Item' },
-        ],
+          { title: 'List Item' }
+        ]
       },
       {
         action: 'directions_run',
         title: 'Family',
         items: [
-          { title: 'List Item' },
-        ],
+          { title: 'List Item' }
+        ]
       },
       {
         action: 'healing',
         title: 'Health',
         items: [
-          { title: 'List Item' },
-        ],
+          { title: 'List Item' }
+        ]
       },
       {
         action: 'content_cut',
         title: 'Office',
         items: [
-          { title: 'List Item' },
-        ],
+          { title: 'List Item' }
+        ]
       },
       {
         action: 'local_offer',
         title: 'Promotions',
         items: [
-          { title: 'List Item' },
-        ],
-      },
+          { title: 'List Item' }
+        ]
+      }
     ],
-    drawer_inner: false 
+    drawer_inner: false
   }),
   watch: {
     drawer(newVal) {
@@ -154,7 +154,3 @@ export default {
   }
 }
 </script>
-
-<style>
-
-</style>

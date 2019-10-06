@@ -1,31 +1,26 @@
 <template>
-    <!-- <van-card
-    num="2"
-    :price="product.price"
-    :title="product.title"
-    desc="Description"
-    thumb=""
-    /> -->
-    <div class="card-product">
-        <div class="card-product-image" :style="'background-image: url('+product.src+'); width: 100%; height: 150px;'">
-          <div class="card-product-tag">Abusaxiy</div>
-        </div>
-        <div class="card-product-content">
-          <div class="card-product-title">{{ product.title }}</div>
-          <div class="card-product-price">{{ product.price }}</div>
-        </div>
+  <div class="card-product">
+    <div class="card-product-image" :style="'background-image: url('+product.src+'); width: 100%; height: 150px;'">
+      <div class="card-product-tag">Abusaxiy</div>
     </div>
+    <div class="card-product-content">
+      <div class="card-product-title">{{ product.title }}</div>
+      <div class="card-product-price">{{ product.price }}</div>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'Product',
-    props: {
-        product:{
-            type: Object,
-            default: {}
-        }
+  name: 'Product',
+  props: {
+    product: {
+      type: Object,
+      default() {
+        return {}
+      }
     }
+  }
 }
 </script>
 

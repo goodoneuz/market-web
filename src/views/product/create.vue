@@ -1,5 +1,5 @@
 <template>
-  <v-row style="width: 100%; margin-top: -11px;" dense >
+  <v-row style="width: 100%; margin-top: -11px;" dense>
     <v-col
       cols="12"
       md="4"
@@ -62,10 +62,10 @@
 </template>
 
 <script>
-import Vue from 'vue';
-import { Uploader } from 'vant';
+import Vue from 'vue'
+import { Uploader } from 'vant'
 
-Vue.use(Uploader);
+Vue.use(Uploader)
 
 export default {
   name: 'ProductCreate',
@@ -91,7 +91,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>

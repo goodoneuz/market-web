@@ -1,12 +1,12 @@
 <template>
-  <v-row style="width: 100%; margin-top: -11px;" dense >
-    <card-item v-for="item in items" :key="item.id" :item="item"></card-item>
-    <card-total></card-total>
+  <v-row style="width: 100%; margin-top: -11px;" dense>
+    <card-item v-for="item in items" :key="item.id" :item="item" />
+    <card-total />
   </v-row>
 </template>
 
 <script>
-import CardItem from "./components/card-item"
+import CardItem from './components/card-item'
 import CardTotal from './components/card-total'
 
 export default {
@@ -36,16 +36,10 @@ export default {
           amount: 1,
           price: 23532
         }
-        
       ]
     }
   },
   methods: {
-    
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>

@@ -2,7 +2,9 @@ import Vue from "vue";
 import Router from "vue-router";
 import MainLayout from "./layouts/main";
 import Home from "./views/Home.vue";
-import ProductDetails from './views/ProductDetails'
+import ProductDetails from './views/product/show'
+import ProductCreate from './views/product/create'
+import CardView from './views/card/show'
 import { homedir } from "os";
 
 Vue.use(Router);
@@ -24,6 +26,16 @@ export default new Router({
           path: '/product',
           component: ProductDetails,
           name: 'product-details'
+        },
+        {
+          path: '/product/create',
+          component: ProductCreate,
+          name: 'product-create'
+        },
+        {
+          path: '/card',
+          component: CardView,
+          name: 'card-new'
         }
       ]
     },

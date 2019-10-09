@@ -1,5 +1,5 @@
 <template>
-  <v-col cols="12">
+  <v-col cols="12" class="py-2">
     <v-card
       :color="'#fff'"
     >
@@ -12,9 +12,7 @@
 
           <v-list-item-subtitle v-text="item.price + ' сум'" />
           <v-card-actions>
-            <v-btn text class="float-right">
-              <van-stepper v-model="item.amount" input-width="40px" button-size="32px" />
-            </v-btn>
+            <van-stepper v-model="item.amount" input-width="40px" button-size="32px" />
           </v-card-actions>
         </v-list-item-content>
         <v-list-item-avatar

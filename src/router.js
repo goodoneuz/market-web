@@ -9,7 +9,7 @@ import CardView from './views/card/show'
 Vue.use(Router)
 
 export default new Router({
-  mode: 'history',
+  // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
     {
@@ -34,7 +34,7 @@ export default new Router({
         {
           path: '/card',
           component: CardView,
-          name: 'card-new'
+          name: 'card-view'
         }
       ]
     }

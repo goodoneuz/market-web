@@ -2,34 +2,45 @@
   <v-col cols="12">
     <v-card
       :color="'#fff'"
+      class="px-4 py-2"
     >
-      <v-list-item three-line>
-        <v-list-item-content class="align-self-start">
-          <v-list-item-title
-            class="mb-2"
-            v-text="item.name"
-          />
-
-          <v-list-item-subtitle v-text="item.price + ' сум'" />
-          <v-card-actions>
-            <v-btn text class="float-right">
-              <van-stepper v-model="item.amount" input-width="40px" button-size="32px" />
-            </v-btn>
-          </v-card-actions>
-        </v-list-item-content>
-        <v-list-item-avatar
-          size="100"
-          tile
+      <v-row>
+        <v-col
+          cols="5"
+          class="pa-2 total-title"
         >
-          <v-img :src="item.image" />
-        </v-list-item-avatar>
-      </v-list-item>
+          <p>Общее: </p>
+          123902 UZS
+        </v-col>
+        <v-col
+          cols="7"
+        >
+          <v-btn large color="primary" class="w-100">Оформить заказ</v-btn>
+        </v-col>
+      </v-row>
     </v-card>
   </v-col>
 </template>
 
 <script>
 export default {
-  name: 'CardTotal'
+  name: 'CardTotal',
+  data() {
+    return {
+      total: 1231223
+    }
+  }
 }
 </script>
+
+<style lang="scss">
+  .total-title {
+    p {
+      font-size: 14px;
+      line-height: 16px;
+      color: #888;
+    }
+    font-size: 16px;
+    line-height: 18px;
+  }
+</style>

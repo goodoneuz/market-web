@@ -8,7 +8,7 @@
       dark
     >
       <v-app-bar-nav-icon @click.stop="drawer = !drawer" />
-      <v-toolbar-title>Webozor.uz</v-toolbar-title>
+      <v-toolbar-title>{{ pageTitle }}</v-toolbar-title>
       <div class="flex-grow-1" />
 
       <v-btn icon @click="filterDrawer = !filterDrawer">
@@ -25,6 +25,7 @@
 <script>
 import NavigationDrawer from '@/components/navigation-drawer'
 import FilterDrawer from '@/components/filter-drawer'
+import getPageTitle from '@/utils/get-page-title'
 
 export default {
   name: 'Header',
@@ -42,6 +43,11 @@ export default {
       'Авто'
     ]
   }),
+  computed: {
+    pageTitle() {
+      return getPageTitle(this.$route.meta)
+    }
+  },
   methods: {
     goBasket() {
       this.$router.push({ name: 'card-view' })

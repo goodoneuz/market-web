@@ -5,10 +5,10 @@ import Home from './views/Home.vue'
 import ProductDetails from './views/product/show'
 import ProductCreate from './views/product/create'
 import CardView from './views/card/show'
-
+import ClosableLayout from './layouts/closable-layout'
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   // mode: 'history',
   base: process.env.BASE_URL,
   routes: [
@@ -20,21 +20,28 @@ export default new Router({
           path: '/',
           component: Home,
           name: 'home'
+        }
+      ]
+    },
+    {
+      path: '/',
+      component: ClosableLayout,
+      children: [
+        {
+          path: '/card',
+          component: CardView,
+          name: 'card-view',
+          meta: { title: 'My card' }
         },
         {
-          path: '/product',
+          path: '/product/:id',
           component: ProductDetails,
-          name: 'product-details'
+          name: 'product-show'
         },
         {
           path: '/product/create',
           component: ProductCreate,
           name: 'product-create'
-        },
-        {
-          path: '/card',
-          component: CardView,
-          name: 'card-view'
         }
       ]
     }
@@ -49,3 +56,5 @@ export default new Router({
     // }
   ]
 })
+
+export default router

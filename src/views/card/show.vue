@@ -4,12 +4,12 @@
     class="d-flex align-content-start flex-wrap"
   >
     <v-col cols="12" style="position: relative;">
-      <v-row  class="scrollable">
+      <v-row class="scrollable">
         <card-item v-for="item in items" :key="item.id" :item="item" />
       </v-row>
-      <div class="shadow"></div>
+      <div class="shadow" />
     </v-col>
-    <card-total style="height: 100px;"/>
+    <card-total style="height: 100px;" />
   </v-row>
 </template>
 
@@ -73,19 +73,22 @@ export default {
 }
 </script>
 <style lang="scss">
-  .scrollable {
-    height: calc(100vh - 250px);
-    overflow-y: scroll;
-    position: relative;
-    min-height: 100%;
-  }
-  .shadow {
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,1) 21%, rgba(255,255,255,0) 100%);
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    height: 50px;
-    width: inherit;
-  }
+.scrollable {
+  height: calc(100vh - 250px);
+  overflow-y: scroll;
+  position: relative;
+  min-height: 100%;
+}
+.shadow {
+  background: rgb(250,250,250);
+  background: -moz-linear-gradient(0deg, rgba(250,250,250,1) 21%, rgba(255,255,255,0) 100%);
+  background: -webkit-linear-gradient(0deg, rgba(250,250,250,1) 21%, rgba(255,255,255,0) 100%);
+  background: linear-gradient(0deg, rgba(250,250,250,1) 21%, rgba(255,255,255,0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fafafa",endColorstr="#ffffff",GradientType=1);
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 50px;
+  width: inherit;
+}
 </style>

@@ -2,6 +2,7 @@
   <v-row style="width: 100%; margin-top: -11px;">
     <v-carousel
       :height="300"
+      hide-delimiters
     >
       <v-carousel-item
         v-for="(item, i) in items"
@@ -29,20 +30,8 @@
       <div class="product-options">
         <b>Описание и характеристики товара:</b> <br>
         <div class="option">
-          <span class="option-title">Производитель: </span>
-          <span class="option-value">Eclipse</span>
-        </div>
-        <div class="option">
           <span class="option-title">Размер: </span>
           <span class="option-value">M (46), XL (50)</span>
-        </div>
-        <div class="option">
-          <span class="option-title">Размер: </span>
-          <span class="option-value">M (46), XL (50)</span>
-        </div>
-        <div class="option">
-          <span class="option-title">Производитель: </span>
-          <span class="option-value">Eclipse</span>
         </div>
       </div>
     </div>

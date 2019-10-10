@@ -1,5 +1,5 @@
 <template>
-  <div class="card-product">
+  <div class="card-product" @click="goProduct">
     <div class="card-product-image" :style="'background-image: url('+product.src+'); width: 100%; height: 150px;'">
       <div class="card-product-tag">Abusaxiy</div>
     </div>
@@ -19,6 +19,11 @@ export default {
       default() {
         return {}
       }
+    }
+  },
+  methods: {
+    goProduct() {
+      this.$router.push({ name: 'product-show', params: { id: this.product.id }})
     }
   }
 }

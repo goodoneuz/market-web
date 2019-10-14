@@ -91,14 +91,14 @@ export default {
     items: [
       {
         action: 'local_activity',
-        title: 'Attractions',
+        title: 'Мебель',
         items: [
           { title: 'List Item' }
         ]
       },
       {
         action: 'restaurant',
-        title: 'Dining',
+        title: 'Бытовая техника',
         active: true,
         items: [
           { title: 'Breakfast & brunch' },
@@ -108,35 +108,35 @@ export default {
       },
       {
         action: 'school',
-        title: 'Education',
+        title: 'Двери, окна, Витражи',
         items: [
           { title: 'List Item' }
         ]
       },
       {
         action: 'directions_run',
-        title: 'Family',
+        title: 'Полы и напольные покрытия',
         items: [
           { title: 'List Item' }
         ]
       },
       {
         action: 'healing',
-        title: 'Health',
+        title: 'Смеси, герметики и клеи',
         items: [
           { title: 'List Item' }
         ]
       },
       {
         action: 'content_cut',
-        title: 'Office',
+        title: 'Герметики и монтажная пена',
         items: [
           { title: 'List Item' }
         ]
       },
       {
         action: 'local_offer',
-        title: 'Promotions',
+        title: 'Затирки',
         items: [
           { title: 'List Item' }
         ]

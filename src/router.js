@@ -4,7 +4,7 @@ import MainLayout from './layouts/main'
 import Home from './views/Home.vue'
 import ProductDetails from './views/product/show'
 import ProductCreate from './views/product/create'
-import CardView from './views/card/show'
+import CartView from './views/cart/show'
 import ClosableLayout from './layouts/closable-layout'
 Vue.use(Router)
 
@@ -28,10 +28,10 @@ const router = new Router({
       component: ClosableLayout,
       children: [
         {
-          path: '/card',
-          component: CardView,
-          name: 'card-view',
-          meta: { title: 'My card' }
+          path: '/cart',
+          component: CartView,
+          name: 'cart-view',
+          meta: { title: 'Корзина' }
         },
         {
           path: '/product/:id',

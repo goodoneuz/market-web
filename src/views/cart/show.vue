@@ -5,21 +5,21 @@
   >
     <v-col cols="12" style="position: relative;">
       <v-row class="scrollable">
-        <card-item v-for="item in items" :key="item.id" :item="item" />
+        <cart-item v-for="item in items" :key="item.id" :item="item" />
       </v-row>
       <div class="shadow" />
     </v-col>
-    <card-total style="height: 100px;" />
+    <cart-total style="height: 100px;" />
   </v-row>
 </template>
 
 <script>
-import CardItem from './components/card-item'
-import CardTotal from './components/card-total'
+import CartItem from './components/cart-item'
+import CartTotal from './components/cart-total'
 
 export default {
-  name: 'CardShow',
-  components: { CardItem, CardTotal },
+  name: 'CartShow',
+  components: { CartItem, CartTotal },
   data() {
     return {
       items: [

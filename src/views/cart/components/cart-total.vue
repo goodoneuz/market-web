@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: 'CardTotal',
+  name: 'CartTotal',
   data() {
     return {
       total: 1231223

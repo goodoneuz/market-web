@@ -33,7 +33,7 @@ import { Stepper } from 'vant'
 Vue.use(Stepper)
 
 export default {
-  name: 'CardItem',
+  name: 'CartItem',
   props: {
     item: {
       type: Object,

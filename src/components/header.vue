@@ -50,7 +50,7 @@ export default {
   },
   methods: {
     goBasket() {
-      this.$router.push({ name: 'card-view' })
+      this.$router.push({ name: 'cart-view' })
     }
   }
 }
